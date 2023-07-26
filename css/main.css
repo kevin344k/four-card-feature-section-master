@@ -39,7 +39,7 @@ header :nth-child(3) {
   font-size: 1.8rem;
   font-weight: 400;
   color: hsl(229, 6%, 66%);
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   line-height: 25px;
 }
 
@@ -132,7 +132,7 @@ main .section--calculator :nth-child(3) {
 
 @media (min-width: 1440px) {
   body {
-    padding: 1% 10%;
+    padding: 3% 10%;
   }
   header {
     max-width: 600px;
@@ -156,8 +156,8 @@ main .section--calculator :nth-child(3) {
     flex-direction: row;
     width: 100%;
     max-width: none;
-    justify-content: space-evenly;
-    gap: 0%;
+    justify-content: center;
+    gap: 20px;
     align-items: center;
   }
   main section {
