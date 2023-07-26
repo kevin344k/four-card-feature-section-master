@@ -1,0 +1,219 @@
+//# Front-end Style Guide
+
+//## Layout
+
+//The designs were created to the following widths:
+
+//- Mobile: 375px
+//- Desktop: 1440px
+
+//## Colors
+
+//### Primary
+
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+//### Neutral
+
+$Very_Dark_Blue: hsl(234, 12%, 34%);
+$Grayish_Blue: hsl(229, 6%, 66%);
+$Very_Light_Gray: hsl(0, 0%, 98%);
+
+//## Typography
+
+//### Body Copy
+
+$Font_size: 1.5rem;
+
+//### Fonts
+$font-family_Poppins: 'Poppins', sans-serif;
+//- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+//- Weights: 200, 400, 600
+
+@mixin text($size, $weigth, $color) {
+    font-size: $size;
+    font-weight: $weigth;
+    color: $color;
+}
+
+@mixin img($width: 30px, $height: 30px, $url) {
+    display: block;
+    width: $width;
+    height: $height;
+    background-image: url($url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 10%;
+    font-size: $Font_size;
+    font-family: $font-family_Poppins;
+    background-color: $Very_Light_Gray;
+
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 370px;
+    margin: auto;
+
+    :nth-child(1) {
+        @include text(3rem, 200, $Grayish_Blue);
+        margin-bottom: 5px;
+    }
+
+    :nth-child(2) {
+        @include text(3rem, 600, $Very_Dark_Blue);
+        margin-bottom: 8px;
+    }
+
+    :nth-child(3) {
+        @include text(1.8rem, 400, $Grayish_Blue);
+        margin-bottom: 80px;
+        line-height: 25px;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 375px;
+    margin: auto;
+
+    section {
+        width: 100%;
+        height: auto;
+        background-color: white;
+        border-radius: 5px;
+        padding: 30px;
+
+    }
+
+    .section--supervisor {
+        width: 100%;
+        border-top: 3px solid $Cyan;
+        box-shadow: 1px 25px 38px 5px rgba(0, 0, 0, 0.23);
+
+        :nth-child(1) {
+            @include text(1.8rem, 600, $Very_Dark_Blue);
+            margin-bottom: 8px;
+
+        }
+
+        :nth-child(2) {
+            @include text(1.3rem, 400, $Grayish_Blue);
+            margin-bottom: 25px;
+        }
+
+        :nth-child(3) {
+            width: 100%;
+            @include img(50px, 50px, "../images/icon-supervisor.svg");
+            margin-left: calc(100% - 50px);
+        }
+    }
+
+    .section--group-div {
+       // width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .section-builder {
+            @extend .section--supervisor;
+            border-top: 3px solid $Red;
+            background-color: white;
+
+            :nth-child(3) {
+
+                @include img(50px, 50px, "../images/icon-team-builder.svg");
+
+            }
+        }
+
+        .section-karma {
+            @extend .section--supervisor;
+            border-top: 3px solid $Orange;
+            background-color: white;
+
+            :nth-child(3) {
+
+                @include img(50px, 50px, "../images/icon-karma.svg");
+
+            }
+        }
+    }
+
+    .section--calculator {
+        @extend .section--supervisor;
+        border-top: 3px solid $Blue;
+        margin-bottom: 50px;
+
+        :nth-child(3) {
+
+            @include img(50px, 50px, "../images/icon-calculator.svg");
+
+        }
+    }
+}
+
+@media (min-width:1440px) {
+
+
+    body {
+        padding: 1% 15%;
+    }
+
+    header {
+        max-width: 600px;
+        :nth-child(1) {
+            @include text(3.5rem, 200, $Grayish_Blue);
+     
+        }
+    
+        :nth-child(2) {
+            @include text(3.5rem, 600, $Very_Dark_Blue);
+     
+        }
+    
+        :nth-child(3) {
+            @include text(1.5rem, 400, $Grayish_Blue);
+     
+        }
+    }
+
+    main {
+        flex-direction: row;
+        width: 100%;
+        max-width: none;
+        justify-content: space-evenly;
+        gap: 0px;
+        align-items: center;
+        section{
+           width: 324px;
+            height: 220px;
+        }
+        .section--supervisor{
+        width: 340px;
+        }
+    }
+}

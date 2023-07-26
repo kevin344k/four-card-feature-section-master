@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 10%;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 50px;
+  max-width: 370px;
+  margin: auto;
+}
+header :nth-child(1) {
+  font-size: 3rem;
+  font-weight: 200;
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 5px;
+}
+header :nth-child(2) {
+  font-size: 3rem;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 8px;
+}
+header :nth-child(3) {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 80px;
+  line-height: 25px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 375px;
+  margin: auto;
+}
+main section {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px;
+}
+main .section--supervisor, main .section--calculator, main .section--group-div .section-karma, main .section--group-div .section-builder {
+  width: 100%;
+  border-top: 3px solid hsl(180, 62%, 55%);
+  box-shadow: 1px 25px 38px 5px rgba(0, 0, 0, 0.23);
+}
+main .section--supervisor :nth-child(1), main .section--calculator :nth-child(1), main .section--group-div .section-karma :nth-child(1), main .section--group-div .section-builder :nth-child(1) {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 8px;
+}
+main .section--supervisor :nth-child(2), main .section--calculator :nth-child(2), main .section--group-div .section-karma :nth-child(2), main .section--group-div .section-builder :nth-child(2) {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 25px;
+}
+main .section--supervisor :nth-child(3), main .section--calculator :nth-child(3), main .section--group-div .section-karma :nth-child(3), main .section--group-div .section-builder :nth-child(3) {
+  width: 100%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/icon-supervisor.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: calc(100% - 50px);
+}
+main .section--group-div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .section--group-div .section-builder {
+  border-top: 3px solid hsl(0, 78%, 62%);
+  background-color: white;
+}
+main .section--group-div .section-builder :nth-child(3) {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/icon-team-builder.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .section--group-div .section-karma {
+  border-top: 3px solid hsl(34, 97%, 64%);
+  background-color: white;
+}
+main .section--group-div .section-karma :nth-child(3) {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/icon-karma.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .section--calculator {
+  border-top: 3px solid hsl(212, 86%, 64%);
+  margin-bottom: 50px;
+}
+main .section--calculator :nth-child(3) {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/icon-calculator.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding: 1% 15%;
+  }
+  header {
+    max-width: 600px;
+  }
+  header :nth-child(1) {
+    font-size: 3.5rem;
+    font-weight: 200;
+    color: hsl(229, 6%, 66%);
+  }
+  header :nth-child(2) {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+  }
+  header :nth-child(3) {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: hsl(229, 6%, 66%);
+  }
+  main {
+    flex-direction: row;
+    width: 100%;
+    max-width: none;
+    justify-content: space-evenly;
+    gap: 0px;
+    align-items: center;
+  }
+  main section {
+    width: 324px;
+    height: 220px;
+  }
+  main .section--supervisor, main .section--group-div .section-builder, main .section--group-div .section-karma, main .section--calculator {
+    width: 340px;
+  }
+}/*# sourceMappingURL=main.css.map */
