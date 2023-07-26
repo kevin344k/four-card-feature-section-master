@@ -132,7 +132,7 @@ main .section--calculator :nth-child(3) {
 
 @media (min-width: 1440px) {
   body {
-    padding: 1% 15%;
+    padding: 1% 10%;
   }
   header {
     max-width: 600px;
@@ -157,7 +157,7 @@ main .section--calculator :nth-child(3) {
     width: 100%;
     max-width: none;
     justify-content: space-evenly;
-    gap: 0px;
+    gap: 0%;
     align-items: center;
   }
   main section {
